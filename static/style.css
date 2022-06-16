@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+
+html, body {
+    border: 0;
+    height: 100%;
+    font-family: 'Lovers Quarrel', cursive;
+}
+
+body {
+    background-color: rgb(14, 14, 14);
+}
+
+.p_top_small {
+    padding-top: .5rem;
+}
+
+.p_bottom_small {
+    padding-bottom: .2rem;
+}
+
+div.container {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container div.image img {
+    max-width: 20rem;
+    border-radius: 50%;
+}
+
+div.container div.name p {
+    color: rgb(236, 236, 236);
+    border: 0 !important;
+    font-size: 5.5rem;
+    font-weight: 100 !important;
+}
