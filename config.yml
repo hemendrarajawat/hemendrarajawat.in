@@ -1,0 +1,94 @@
+baseURL: https://hemendrarajawat.in/
+languageCode: en-us
+title: Hemendra Singh Rajawat
+theme: PaperMod
+
+taxonomies:
+    category: categories
+    tag: tags
+
+# menu:
+#     main:
+#         - identifier: home
+#           name: Home
+#           url: /
+#           weight: 10
+#         - identifier: blog
+#           name: Blog
+#           url: /blog
+#           weight: 20
+#         - identifier: projects
+#           name: Projects
+#           url: /projects
+#           weight: 30
+#         - identifier: experience
+#           name: Experience
+#           url: /experience
+#           weight: 40
+#         - identifier: search
+#           name: Search
+#           url: /search
+#           weight: 50
+#         - name: Tags
+#           url: tags/
+#           weight: 60
+
+params:
+    defaultTheme: auto
+    env: production
+
+    profileMode:
+        enabled: true
+        title: Hemendra Singh Rajawat
+        subtitle: "
+        **Salesforce & TensorFlow Certified Developer** \n
+
+        Salesforce consultant at Deloitte with 5 years of development experience 💻. My hobby is cycling. 🚴‍♂️
+
+        "
+        imageUrl: home/me.jpg
+        imageWidth: 220
+        imageHeight: 220
+        buttons:
+            - name: ↓ Resume
+              url: home/hemendra_resume.pdf
+
+    socialIcons:
+        - name: email
+          url: mailto:mail@hemendrarajawat.in
+        - name: linkedin
+          url: https://www.linkedin.com/in/hsrajawat/
+        - name: github
+          url: https://github.com/hemendrarajawat
+        - name: kaggle
+          url: https://www.kaggle.com/hemendrasr
+
+    ShowShareButtons: true
+    ShowReadingTime: true
+    ShowToc: false
+    ShowBreadCrumbs: true
+    ShowPostNavLinks: true
+    ShowCodeCopyButtons: true
+    hideDescriptionInList: false
+
+    cover:
+        hidden: false
+        linkFullImages: false
+        hiddenInList: false
+        hiddenInSingle: false
+
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
