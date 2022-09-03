@@ -17,11 +17,21 @@
           "type": "string"
         },
         {
+          "title": "summary",
+          "name": "summary",
+          "type": "string"
+        },
+        {
           "title": "Publishing date",
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
+        },
+        {
+          "title": "dateString",
+          "name": "dateString",
+          "type": "string"
         },
         {
           "title": "Content preview",
@@ -42,6 +52,31 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "ShowReadingTime",
+          "name": "ShowReadingTime",
+          "type": "boolean"
+        },
+        {
+          "title": "disableShare",
+          "name": "disableShare",
+          "type": "boolean"
+        },
+        {
+          "title": "ShowPostNavLinks",
+          "name": "ShowPostNavLinks",
+          "type": "boolean"
+        },
+        {
+          "title": "lastmod",
+          "name": "lastmod",
+          "type": "datetime"
+        },
+        {
+          "title": "weight",
+          "name": "weight",
+          "type": "number"
         }
       ]
     }
@@ -50,16 +85,7 @@
   "frontMatter.content.publicFolder": "static",
   "frontMatter.content.pageFolders": [
     {
-      "title": "blog",
-      "path": "[[workspace]]/content/blog"
-    },
-    {
-      "title": "experience",
-      "path": "[[workspace]]/content/experience"
-    },
-    {
-      "title": "projects",
-      "path": "[[workspace]]/content/projects"
+      "path": "[[workspace]]/content"
     }
   ],
   "frontMatter.taxonomy.tags": [
