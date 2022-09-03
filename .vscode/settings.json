@@ -4,5 +4,6 @@
     "frontMatter.dashboard.openOnStart": false,
     "[markdown]": {
     },
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false
 }
