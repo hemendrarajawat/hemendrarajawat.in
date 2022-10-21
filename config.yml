@@ -17,10 +17,10 @@ menu:
         #   name: Blog
         #   url: /blog
         #   weight: 20
-        # - identifier: projects
-        #   name: Projects
-        #   url: /projects
-        #   weight: 30
+        - identifier: projects
+          name: Projects
+          url: /projects
+          weight: 30
         - identifier: experience
           name: Experience
           url: /experience
@@ -29,9 +29,9 @@ menu:
           name: Search
           url: /search
           weight: 50
-        # - name: Tags
-        #   url: tags/
-        #   weight: 60
+        - name: Tags
+          url: tags/
+          weight: 60
 
 params:
     defaultTheme: auto
@@ -43,8 +43,7 @@ params:
         subtitle: "
         **Salesforce & TensorFlow Certified Developer** \n
 
-        Salesforce Consultant at Deloitte with 5 years of development experience 💻. My hobby is cycling. 🚴‍♂️
-
+        Consultant at Deloitte with 5 years of development experience 💻. My hobby is cycling 🚴‍♂️. Checkout my projects too focused on machine learning.
         "
         imageUrl: home/me.jpg
         imageWidth: 220
@@ -65,7 +64,8 @@ params:
 
     ShowShareButtons: true
     ShowReadingTime: true
-    ShowToc: false
+    ShowToc: true
+    TocOpen: false
     ShowBreadCrumbs: true
     ShowPostNavLinks: true
     ShowCodeCopyButtons: true
@@ -75,7 +75,7 @@ params:
         hidden: false
         linkFullImages: false
         hiddenInList: false
-        hiddenInSingle: false
+        hiddenInSingle: true
 
     fuseOpts:
         isCaseSensitive: false
