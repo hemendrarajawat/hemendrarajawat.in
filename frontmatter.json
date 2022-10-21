@@ -89,7 +89,10 @@
     }
   ],
   "frontMatter.taxonomy.tags": [
+    "binary classification",
+    "deep learning",
     "machine learning",
+    "pre-trained model",
     "tensorflow"
   ],
   "frontMatter.taxonomy.categories": []
