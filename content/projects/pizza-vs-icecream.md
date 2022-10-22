@@ -1,6 +1,6 @@
 ---
 title: Pizza vs Ice-cream Classifier
-lastmod: 2022-10-21T19:25:54.177Z
+lastmod: 2022-10-22T13:59:02.283Z
 date: 2022-09-14T12:08:31.029Z
 cover:
   image: /projects/pizza-vs-icecream/pizza-vs-icecream-cover.png
@@ -12,21 +12,20 @@ tags:
 ---
 
 
-A Deep Learning Vison Classifier built on Tensorflow to classify the provided image between ice-cream 🍨 and pizza 🍕. 
-This is a simple exercise to start with machine learning. You can check the app on: https://pizza-vs-icecream.streamlitapp.com/
+A Deep Learning Vision Classifier built on Tensorflow to classify the provided image between ice cream 🍨 and pizza 🍕. 
+This is a simple exercise to start with machine learning. You can check the app at: https://pizza-vs-icecream.streamlitapp.com/
 
-In this project we will be looking at the dataset journey(from gathering till preperation), and then will jump into the python code for creating the model, the FlaskAPI backend, 
-and Streamlit python code.
+In this project, we will be looking at the dataset journey(from gathering to preparation), and then will jump into the python code for creating the model, the FlaskAPI backend, and Streamlit python code.
 
 
 ## Dataset
 
-The dataset used is hosted on [Kaggle](https://www.kaggle.com/datasets/hemendrasr/pizza-vs-ice-cream), and the data was captured from [Freepik](https://www.freepik.com/) using python script. Once the data was captured, [roboflow](https://roboflow.com) was used to organize, annotate. Roboflow can be used for more advanced features like: augmentation, pre-processing, getting more examples, and exporting the data is different formats.
+The dataset used is hosted on [Kaggle](https://www.kaggle.com/datasets/hemendrasr/pizza-vs-ice-cream), and the data was captured from [Freepik](https://www.freepik.com/) using python script. Once the data was captured, [Roboflow](https://roboflow.com) was used to organize and annotate. Roboflow can be used for more advanced features like augmentation, pre-processing, getting more examples, and exporting the data in different formats.
 
-I exported the data in folder format which was able to give me the data in below format:
+I exported the data in folder format which was able to give me the data in the below format:
 <img src="/projects/pizza-vs-icecream/dataset-folder-structure.png" alt="Dataset folder structure" width="200"/>
 
-The dataset consit of around 1300 images. 718 images for training, 208 images for validation and 106 images for testing.
+The dataset consists of around 1300 images. 718 images for training, 208 images for validation, and 106 images for testing.
 
 
 ## Python Logic for Model Creation
@@ -49,7 +48,7 @@ print(tf.__version__)
 
 ### Loading Data
 
-We have loaded the data using `ImageDataGenerator` with multiple augmentation layers as our dataset is quite small, only 718 images for training. 
+We have loaded the data using `ImageDataGenerator` with multiple augmentation layers as our dataset is quite small, with only 718 images for training. 
 
 ```python
 train_datagen = tf.keras.preprocessing.image.ImageDataGenerator(
@@ -116,7 +115,7 @@ IMAGE SHAPE:  (480, 480, 3)
 ```
 > ![](/projects/pizza-vs-icecream/train-data-visualization.png)
 
-Now let's jump over the model architecture and see how we smartly used the pre-trained model as feature extractor.
+Now let's jump over the model architecture and see how we smartly used the pre-trained model as a feature extractor.
 
 ### Model Architecture
 
@@ -152,9 +151,9 @@ Non-trainable params: 53,150,388
 _________________________________________________________________
 ```
 
-As we have fewer training images with drastic differene b/w images such as color, size, people, placement & amount of target items, it is quite time-consuming and complex task to train the model from scratch. That's why it's a best practise to check if a pre-trained model can be utilized.
+As we have fewer training images with drastic differences b/w images such as color, size, people, placement & amount of target items, it is a quite time-consuming and complex task to train the model from scratch. That's why it's a best practice to check if a pre-trained model can be utilized.
 
-After muliple iteractions of custom model architecture, we have used the 'EfficientNet V2' model from [TensorFlow Hub](https://tfhub.dev) which was trained on imagenet-21k (Full ImageNet, Fall 2011 release) and fine-tuned on ImageNet1K as a feature extractor and a single dense layer which is used as output layer having 2 nodes defining 2 classes in the dataset.
+After multiple iterations of custom model architecture, we have used the 'EfficientNet V2' model from [TensorFlow Hub](https://tfhub.dev) which was trained on imagenet-21k (Full ImageNet, Fall 2011 release) and fine-tuned on ImageNet1K as a feature extractor and a single dense layer which is used as output layer having 2 nodes defining 2 classes in the dataset.
 
 ### Model Training
 
@@ -200,7 +199,7 @@ Epoch 40/50
 23/23 - 34s - loss: 0.0050 - accuracy: 0.9972 - val_loss: 0.0027 - val_accuracy: 1.0000 - 34s/epoch - 1s/step
 ```
 
-And, definitely in our use-case the pre-trained model has worked wonderfully. Let's finally evaluate the model.
+And, definitely in our use case, the pre-trained model has worked wonderfully. Let's finally evaluate the model.
 
 ### Model Evaluation
 
@@ -218,32 +217,32 @@ Out[15]:
 [0.004329057410359383, 1.0]
 ```
 
-As the model is working flawlessly even on the test data which the model has never seen, it's time to take this model to the production. Upload the saved model to the Google Cloud, which will be used in next section for building the backend services.
+As the model is working flawlessly even on the test data which the model has never seen, it's time to take this model to production. Upload the saved model to Google Cloud, which will be used in the next section for building the backend services.
 
 
 ## Flask API Backend Code
 
-Python code for Flask API is straight forward and the detailed code can be accessible at [main.py](https://github.com/hemendrarajawat/pizza-vs-icecream/blob/main/main.py). We load the saved(Google Cloud) TensorFlow model once the Flask run initially and we getting the `POST` request at root level along with image and first thing will be pre-processing the received image.
+Python code for Flask API is straightforward and the detailed code can be accessible at [main.py](https://github.com/hemendrarajawat/pizza-vs-icecream/blob/main/main.py). We load the saved(Google Cloud) TensorFlow model once the Flask run initially and we get the `POST` request at the root level along with the image and first thing will be, pre-processing the received image.
 
 The pre-processing steps include:
 1. Decoding the base64 image
 2. Reading the image using `tf.io.decode_image(image, channels=3)`
 3. Resizing the image to match the image size used to train the model i.e., 480
 4. Converting the image to array
-5. And, finally normalizing the image array by dividing it with 255.0
+5. And finally, normalize the image array by dividing it with 255.0
 
-After pre-processing, we ran the input image array through model using `model.predict(input)` and get the output as probability of classes. Using which the output classes is identified and returned.
+After pre-processing, we ran the input image array through the model using `model.predict(input)` and get the output as probability of classes. Using this the high-probability class is identified and returned.
 
 
 ## Front-End Streamlit App
 
 To make the model easier to use, let's build a [Streamlit App](http://streamlit.io/), which provides astonishing UI with little python code. The code is accessible at [app.py](https://github.com/hemendrarajawat/pizza-vs-icecream/blob/main/app.py). 
 
-The purpose of this python code is to provide the upload facility to users, so they can upload images which will be encoded and send to the Flask API for prediction. Once the result is returned from API request, using Streamlit functions, we can show the result in very beautiful formats along with the uploaded images.
+The purpose of this python code is to provide the upload facility to users, so they can upload an image that will be encoded and sent to the Flask API for prediction. Once the result is returned from the API request, using Streamlit functions, we can show the result in very beautiful formats along with the uploaded images.
 
 ## Final Connections b/w Streamlit and Flask API
 
-The whole code was uploaded to the GitHub and the Flask API code was uploaded to the Google Cloud Run functionality and the Streamlit app code was connected to the Streamlit app. 
+The whole code was uploaded to GitHub and the Flask API code was uploaded to the Google Cloud Run functionality and the Streamlit app code was connected to the Streamlit app. 
 
 ## Results
 
@@ -258,6 +257,6 @@ The whole code was uploaded to the GitHub and the Flask API code was uploaded to
 
 ## Closing Note
 
-This was a fun project for me as the binary classification task was simple, but if we look the whole project in a nutshell from data collection to taking the model to production with beautiful UI, it was a challenging task too. 
+This was a fun project for me as the binary classification task was simple, but if we look at the whole project in a nutshell from data collection to taking the model to production with beautiful UI, it was a challenging task too. 
 
-> *A great beginner friendly project.*
+> *A great beginner-friendly project.*
