@@ -36,6 +36,7 @@ menu:
 params:
     defaultTheme: auto
     env: production
+    description: Portfolio and blog website of Hemendra about tech, ai/ml, and projects.
 
     profileMode:
         enabled: true
