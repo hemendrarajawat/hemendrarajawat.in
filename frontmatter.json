@@ -17,26 +17,11 @@
           "type": "string"
         },
         {
-          "title": "summary",
-          "name": "summary",
-          "type": "string"
-        },
-        {
           "title": "Publishing date",
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
-        },
-        {
-          "title": "dateString",
-          "name": "dateString",
-          "type": "string"
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
         },
         {
           "title": "Is in draft",
@@ -54,29 +39,21 @@
           "type": "categories"
         },
         {
-          "title": "ShowReadingTime",
-          "name": "ShowReadingTime",
-          "type": "boolean"
-        },
-        {
-          "title": "disableShare",
-          "name": "disableShare",
-          "type": "boolean"
-        },
-        {
-          "title": "ShowPostNavLinks",
-          "name": "ShowPostNavLinks",
-          "type": "boolean"
-        },
-        {
           "title": "lastmod",
           "name": "lastmod",
           "type": "datetime"
         },
         {
-          "title": "weight",
-          "name": "weight",
-          "type": "number"
+          "title": "cover",
+          "name": "cover",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "image",
+              "name": "image",
+              "type": "image"
+            }
+          ]
         }
       ]
     }
@@ -85,7 +62,13 @@
   "frontMatter.content.publicFolder": "static",
   "frontMatter.content.pageFolders": [
     {
-      "path": "[[workspace]]/content"
+      "path": "[[workspace]]/content",
+      "title": "content",
+      "originalPath": "[[workspace]]/content"
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/content/blog"
     }
   ],
   "frontMatter.taxonomy.tags": [
