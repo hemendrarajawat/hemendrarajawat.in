@@ -2,6 +2,7 @@ baseURL: https://hemendrarajawat.in/
 languageCode: en-us
 title: Hemendra Singh Rajawat
 theme: PaperMod
+googleAnalytics: G-9VJ1M639JP
 
 taxonomies:
     category: categories
