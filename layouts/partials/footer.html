@@ -5,6 +5,8 @@
     {{- else }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
+    {{ template "_internal/google_analytics.html" . }}
+    {{ template "_internal/google_analytics_async.html" . }}
 </footer>
 {{- end }}
 
