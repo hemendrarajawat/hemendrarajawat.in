@@ -3,7 +3,7 @@ title: Main Challenges of Machine Learning
 description: Since the main task in machine learning is to select a model and train it on
   some data, the two things that can go wrong are 'bad model' and 'bad data'.
 date: 2023-03-13T17:58:45.106Z
-draft: true
+draft: false
 tags:
   - machine learning
 categories:
