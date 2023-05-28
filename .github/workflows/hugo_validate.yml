@@ -30,7 +30,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: ${{ vars.HUGO_VERSION }}
+      HUGO_VERSION: ${{ env.HUGO_VERSION }}
     steps:
       - name: Install Hugo CLI
         run: |
