@@ -34,6 +34,7 @@ jobs:
     steps:
       - name: Install Hugo CLI
         run: |
+          echo ${HUGO_VERSION}
           wget -O ${{ runner.temp }}/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz \
           && tar -xvzf ${{ runner.temp }}/hugo.tar.gz -C ${{ runner.temp }} && sudo sudo mv ${{ runner.temp }}/hugo /usr/local/bin
       - name: Hugo Version
