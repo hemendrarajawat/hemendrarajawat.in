@@ -1,12 +1,12 @@
 ---
-title: Salesforce Consultant
+title: Senior Consultant
 description: Deloitte India (Offices of the US) · Full-time
 draft: false
 ShowReadingTime: false
 disableShare: true
 ShowPostNavLinks: false
 date: null
-dateString: Nov 2020 - Present
-lastmod: 2022-09-03T11:15:27.243Z
-weight: -4
+dateString: Jun 2020 - Present
+lastmod: 2023-07-23T14:16:33.533Z
+weight: -5
 ---
