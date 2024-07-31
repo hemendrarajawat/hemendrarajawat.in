@@ -57,7 +57,7 @@ Let's look at some concrete examples of machine learning tasks, along with the t
 - *Automatically flagging offensive comments on discussion fourms* <br/>
     This is natural language processing (NLP), and more specifically text classification, which can be tackled using RNNs and CNNs
 - *Making your app react to voice commands* <br/>
-    This is speech recognition, which requires processing audo samples: since they are long and complex sequences, they are typically processed using RNNs, CNNs, or transformers
+    This is speech recognition, which requires processing audio samples: since they are long and complex sequences, they are typically processed using RNNs, CNNs, or transformers
 - *Detecting credit card fraud* <br/>
     This is anomly detection, which can be tackled using isolation forests, Gaussian mixture models, or autoencoders
 - *Recommending a product that a client may be interested in, based on past purchases* <br/>
