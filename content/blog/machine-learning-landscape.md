@@ -79,10 +79,10 @@ Let's look at each one of these categoies a bit more closely.
 ML systems can be classifed according to the amount and type of supervision they get during training. There are many categories, but we will discuss the main ones:
 
 #### Supervised learning
-The training set you feed to the algorithm includes the desired solutions, called labels. A typicla supervised learning task is classification.
+The training set you feed to the algorithm includes the desired solutions, called labels. A typical supervised learning task is classification.
 
 #### Unsupervised learning
-The training data is unlabeled and the system tried to learn without a teacher. Visualization alogrithms, anomaly detection, and dimensionality reduction are few examples of unsupervised learning.
+The training data is unlabeled and the system tries to learn without a teacher. Visualization alogrithms, anomaly detection, and dimensionality reduction are few examples of unsupervised learning.
 
 #### Semi-supervised learning
 Since labeling data is usually time-consuming and costly, you will often have plenty of unlabeled instances, and few labeled instances. Some algorithms can deal with data that's partially labeled. Most semi-supervised learning algorithms are combinations of unsupervised and supervised algorithms. 
@@ -106,12 +106,14 @@ First the system is trained, and then it is launced into production and runs wit
 #### Online learning
 In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called mini-batches. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives.
 
+A big challenge with online learning is that if bad data is fed to the system, the system's performance will decline, possibly quickly (depending on the data quality and learning rate).
+
 ### Instance-Based vs Model-Based Learning
 #### Instance-based learning
 The system learns the examples by heart, then generalizes to new cases by using a similarity measure to compare them to the learned examples.
 
 #### Model-based learning
-Another way to generalize from a set of examples is to build a model of these examples and then use that model to make predictions.
+Another way to generalize from a set of examples is to build a model of these examples and then use that model to make *predictions*.
 
 Model selection consists in choosing the type of model and fully specifying its architecture. Training a model means running an algorithm to find the model parameters, that will make it best fit the training data, and hopefully make good predictions on new data.
 
