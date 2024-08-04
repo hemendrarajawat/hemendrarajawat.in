@@ -24,7 +24,7 @@ In this blog, we will be going over the below 6 main challenges of Machine Learn
 - Underfitting the training data
 
 ## Insufficient Quantity of Training Data
-To teach a toddler what a car is, all it takes is for you to point to a car and say "car" or sometimes repeating this procedure a few times. Now the child is able to recognize apples in all sorts of colors and shapes. 
+To teach a toddler what a apple is, all it takes is for you to point to a apple and say "apple" or sometimes repeating this procedure a few times. Now the child is able to recognize apple in all sorts of colors and shapes.
 
 Machine learning is not quite there yet; it takes a lot of data for most machine learning algorithms to work. Even for very simple tasks you typically need thousands of examples, and for complex tasks such as image or speech recognition, you may need millions of examples.
 
@@ -43,7 +43,7 @@ In order to generalize well, it is crucial that your training data be representa
 Having training set that is representative of the cases you want to generalize to is often harder than it sounds: if the sample if too small, you will have sampling noise, but even very large samples can be nonrepresentative if the sampling method is flawed. This is called sampling bias.
 
 ## Poor-Quality Data
-If your training data is full of errors, outliers, and moise, it will make it harder for the system to detect the underlying patterns, so your system is less likely to perform well. It is often well worth the effort to spend time cleaning up your training data. The truth is, most data scientists spend a significant part of their time doing just that.
+If your training data is full of errors, outliers, and noise, it will make it harder for the system to detect the underlying patterns, so your system is less likely to perform well. It is often well worth the effort to spend time cleaning up your training data. The truth is, most data scientists spend a significant part of their time doing just that.
 
 The following are a couple examples of when you'd want to clean up training data:
 - If some instances are clearly outliers, it may help to simply discard them or try to fix the errors manually.
@@ -53,14 +53,14 @@ The following are a couple examples of when you'd want to clean up training data
 Your system will only be capable of learning if training data contains enough relevant features and not too many irrelevant ones. A critical part of the success of a machine learning project is coming up with a good set of features to train on. 
 
 This process, called feature engineering, involves the following steps:
-- *Feature selection* (selecting the most useful features to train on amoing existing features)
+- *Feature selection* (selecting the most useful features to train on among existing features)
 - *Feature extraction* (combining existing features to produce a more useful one)
 - Creating new features by gathering new data
 
 ## Overfitting the Training Data
 Overgeneralizing is something that we humans do all that often, and unfortunately machines can fall into the same trap if we are not careful. In machine learning, this is called overfitting: it means that the model performs well on the training data, but it does not generalize well. 
 
-Complex models such as deep neural networks can detect subtle pattterns in the data, but if the training set is noisy, or if ie is too samll, which introduces, sampling noise, then the model is likely to detect patterns in the noise itself. 
+Complex models such as deep neural networks can detect subtle pattterns in the data, but if the training set is noisy, or if it is too small, which introduces sampling noise, then the model is likely to detect patterns in the noise itself. 
 
 Overfitting happens when the model is too complex relative to the amount and noisiness of the training data. Here are possible solutions:
 - Simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data, or by constraining the model
