@@ -8,6 +8,10 @@ taxonomies:
     category: categories
     tag: tags
 
+minify:
+  disableXML: true
+  minifyOutput: true
+
 menu:
     main:
         - identifier: home
@@ -38,6 +42,7 @@ params:
     defaultTheme: auto
     env: production
     description: Portfolio and blog website of Hemendra about tech, ai/ml, and projects.
+    DateFormat: "January 2, 2006"
 
     profileMode:
         enabled: true
@@ -66,12 +71,14 @@ params:
 
     ShowShareButtons: true
     ShowReadingTime: true
+    ShowWordCount: false
     ShowToc: true
     TocOpen: false
     ShowBreadCrumbs: true
     ShowPostNavLinks: true
     ShowCodeCopyButtons: true
     hideDescriptionInList: false
+    math: true
 
     cover:
         hidden: false
@@ -98,3 +105,15 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
