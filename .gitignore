@@ -1,3 +1,6 @@
+# Static Temp Folders
+**/static/code_notebooks/datasets/*
+
 # Generated files by hugo
 /public/
 /resources/_gen/
