@@ -7,6 +7,7 @@ disableShare: true
 ShowPostNavLinks: false
 date: null
 dateString: Jun 2016 - Jul 2016 · 2 mos
-lastmod: 2022-09-03T11:11:32.237Z
+lastmod: 2024-08-08T21:10:01.468Z
 weight: -1
+slug: summer-intern
 ---
