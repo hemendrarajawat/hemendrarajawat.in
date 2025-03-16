@@ -19,7 +19,7 @@ The first ML application that really became mainstream, improving the lives of h
 Machine learning is the science (and art) of programming computers so they can learn from data.
 
 More general definition:
-> [Machine learning is the] field of study that gives that ability to learn without being explicity programmed.
+> [Machine learning is the] field of study that gives computers the ability to learn without being explicitly programmed.
 >
 > -- <cite>Arthur Samuel, 1959</cite>
 
